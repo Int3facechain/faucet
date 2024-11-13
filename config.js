@@ -5,7 +5,7 @@ const envFile = '.env';
 dotenv.config({ path: envFile });
 
 export default {
-    port: 3838, // http port
+    port: process.env.PORT || 3838, // http port
     db: {
         path: "./db/faucet.db" // save request states
     },
